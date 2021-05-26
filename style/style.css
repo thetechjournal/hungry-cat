@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pond {
+    height:60vh;
+    width: 90%;
+    background: #4FC2F8;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: bottom;
+    background: linear-gradient(to bottom, lightblue, rgb(30, 157, 211), black);
+    background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
+}
+
+.garden{
+    height: 40vh;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    background: green;
+    background-image: url(../images/valley.png);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.score {
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    color: rgb(167, 20, 130);
+}
+
+/* Fishes */
+.fish1 {
+    position: absolute;
+    margin: 5em;
+    cursor: pointer;
+}
+
+#fish2 {
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    right: 0;
+}
+
+
+#fish3 {
+    width: 100px;
+    cursor: pointer;
+    position: absolute;
+    top: 200px;
+    right: 30px;
+}
+
+#fish5 {
+    position: absolute;
+    top: 350px;
+    right: 0px;
+    width: 8%;
+}
+
+#fish6 {
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    width: 5%;
+}
+
+#fish7 {
+    position: absolute;
+    top: 150px;
+    left: -10px;
+    width: 5%;
+   
+}
+
+#fish8 {
+    position: absolute;
+    top: 200px;
+    left: -300px;
+    width: 8%;
+}
+
+#fish9 {
+    position: absolute;
+    top: 300px;
+    left: -200px;
+    width: 9%;
+}
+
+.orange-fish {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    right: -10%;
+}
+
+.green-fish {
+    height: 100px;
+    position: relative;
+    top: 30%;
+    left: 0%;
+}
+
+/* Cat */
+
+.cat {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    /* margin: 60% 35%; */
+    /* border: 1px solid red; */
+}
+
+#cat-satisfied{
+    display: none;
+}
+
+.hungry {
+    animation-name: getHungry;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fed {
+    fill: black;
+}
+
+img {
+    width: 10%;
+}
+
+@keyframes getHungry {
+  100% {
+        fill: red;
+    }
+}
+
+.satified {
+    animation-name: getSatisfied;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes getSatisfied {
+    100% {
+          fill: black;
+      }
+  }
+
+@keyframes move-right {
+    0% {transform: translate(0px, 0px);}
+    100% {transform: translate(1000px, 0px);}
+}
+
+.move-right {
+    animation: move-right 8s ease-in infinite; 
+    animation-fill-mode: forwards;    
+}
+
+.move-left {
+    animation: move-left 10s ease-in infinite; 
+    animation-fill-mode: forwards;    
+}
+
+@keyframes move-left {
+    0% {transform: translate(0px, 0px);}
+    100% {transform: translate(-1000px, 0px);}
+}
+
+
+.jumpup {
+    animation-name: jumptransform;
+    animation-duration: 1s;
+    animation-iteration-count:2;
+    animation-timing-function: ease-in-out;
+    }
+    
+@keyframes jumptransform {
+0% {transform: translate(0px, 0px);}
+100% {transform: translate(0px, -10px);}
+}
+
